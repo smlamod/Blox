@@ -4,8 +4,9 @@ Isometric Block Puzzle game coded in 8086 Assembly
 This was the final project i have made in my Assembly class, the game mechanics is borrowed from the Miniclip game [Bloxorz](https://www.miniclip.com/games/bloxorz/en/). Basically The goal of the game is to navigate the rectagular block in an upright position to the finish tile. 
 
 ![Image of Welcome Screen](blox_screenshots/home.PNG?raw=true "Welcome Screen")
+![Image of Level 1](blox_screenshots/mov.PNG?raw=true "Level 1")
 
-Install Guide:
+### Install Guide:
 
 1. Download and Install Dosbox [here](https://www.dosbox.com/download.php?main=1)
 2. Mount this directory as 'E' or any letter and run BLOX
@@ -17,7 +18,7 @@ E:\> BLOX
 ```
 You can add the Mount lines under AUTOEXEC in the Dosbox config file to avoid typing mount every time Dosbox opens.
 
-Compile Guide:
+### Compile Guide:
 I have used Borland's Turbo Assembler to compile my assembly code which can be found in this [instructables](http://www.instructables.com/id/How-to-run-TASM-and-Compile-x86-Assembly-Program-i/) also uploaded a copy in this rep for redundancy.
 
 To Compile and Run
@@ -27,7 +28,7 @@ E:\> TASM BLOX
 E:\> TLINK BLOX
 E:\> BLOX
 ```
-Level Creation:
+### Level Creation:
 
 ![Image of Level Creation](blox_screenshots/level.png?raw=true "Level")
 
@@ -40,7 +41,7 @@ lvl1 dw 0H,0H,0H,0H,0H,0H,0100H,01D0H,03F0H,01F8H,01B8H,0014H,4H,84H,188H,198H,1
 a level is a 26 word array, wherein a word is corresponds to a row in the game. for example row 9 in level1 is valued `03F0H`
 if we are to create a word in binary based from the image where white tiles are 1 and 0 for empty we would end up with `0000 0011 1111 0000B` or `03F0H` in hexadecimal.
 
-Start and End Points:
+#### Start and End Points:
 
 Start and Endpoints are stored as values in an array in the following variables.
 ```
